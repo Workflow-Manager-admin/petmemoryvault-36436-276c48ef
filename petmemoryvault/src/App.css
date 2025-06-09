@@ -1,0 +1,421 @@
+/* PetMemoryVault Light Theme and Components */
+/* Brand colors */
+:root {
+  --pmv-primary: #F7C59F;
+  --pmv-secondary: #A3D2CA;
+  --pmv-accent: #5E6472;
+  --pmv-bg: #fff;
+  --pmv-dark-text: #363636;
+}
+
+.pmv-light,
+.pmv-light body {
+  background: var(--pmv-bg);
+  color: var(--pmv-dark-text);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: var(--pmv-bg);
+  color: var(--pmv-dark-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root,
+.pmv-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.pmv-navbar {
+  width: 100%;
+  background: var(--pmv-primary);
+  box-shadow: 0 1px 6px 0 rgba(94, 100, 114, 0.10);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid var(--pmv-secondary);
+}
+.pmv-navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px;
+}
+.pmv-logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--pmv-accent);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+.pmv-logo-symbol {
+  font-size: 2rem;
+  color: var(--pmv-secondary);
+}
+.pmv-logo-title {
+  font-size: 1.13em;
+  color: var(--pmv-accent);
+  font-family: 'Pacifico', 'cursive', sans-serif;
+  letter-spacing: 1px;
+}
+.pmv-navlinks {
+  display: flex;
+  gap: 2px;
+  background: #fff1e7;
+  border-radius: 22px;
+  padding: 2px 2px;
+}
+.pmv-nav-btn {
+  padding: 8px 20px;
+  background: transparent;
+  color: var(--pmv-accent);
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.18s;
+  margin: 0 2px;
+  height: 38px;
+}
+.pmv-nav-btn.active,
+.pmv-nav-btn:focus {
+  background: var(--pmv-secondary);
+  color: var(--pmv-accent);
+  font-weight: 700;
+}
+
+.pmv-profile-img-upload {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.pmv-profile-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--pmv-secondary);
+  overflow: hidden;
+  border: 2px solid var(--pmv-accent);
+}
+.pmv-profile-avatar img {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  display: block;
+}
+.pmv-profile-upload-text {
+  font-size: 0.95rem;
+  color: var(--pmv-accent);
+  font-weight: 500;
+}
+
+/* Main Card/Container */
+.pmv-maincontainer {
+  flex: 1 1 auto;
+  margin-top: 32px;
+  padding: 32px 12px 24px 12px;
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pmv-section {
+  background: #fffefc;
+  border-radius: 18px;
+  padding: 32px 24px 20px 24px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px 0 rgba(94, 100, 114, 0.06);
+  min-width: 0;
+}
+
+/* HERO & PROFILE */
+.pmv-profile-hero {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+.pmv-profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--pmv-secondary);
+  border: 3px solid var(--pmv-accent);
+}
+.pmv-profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pmv-section-title {
+  font-size: 2rem;
+  color: var(--pmv-accent);
+  font-weight: 700;
+  margin-bottom: 0.1em;
+}
+.pmv-section-desc {
+  color: var(--pmv-dark-text);
+  opacity: 0.72;
+  margin-bottom: 0.4em;
+}
+
+.pmv-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 1.2em;
+}
+.pmv-input {
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--pmv-accent);
+  padding: 6px 12px;
+  min-width: 180px;
+  background: #fff;
+  color: var(--pmv-dark-text);
+  outline: none;
+  flex: 1 1 120px;
+}
+.pmv-add-memory-form textarea,
+.pmv-add-milestone-form textarea,
+.pmv-scrapbook-desc {
+  resize: vertical;
+  min-height: 42px;
+  font-family: inherit;
+}
+.pmv-btn,
+.pmv-primary-btn,
+.pmv-share-btn,
+.pmv-upload-btn {
+  background: var(--pmv-primary);
+  color: var(--pmv-accent);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  margin: 0 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.18s, filter 0.13s;
+  box-shadow: 0 1px 3px 0 rgba(94,100,114,0.04);
+}
+.pmv-btn:active,
+.pmv-btn:hover,
+.pmv-primary-btn:active,
+.pmv-upload-btn:active {
+  filter: brightness(93%);
+  background: var(--pmv-accent);
+  color: var(--pmv-primary);
+}
+.pmv-primary-btn {
+  background: var(--pmv-secondary);
+}
+.pmv-upload-btn {
+  margin-left: 0;
+  background: var(--pmv-accent);
+  color: #fff;
+}
+
+/* Timeline & Memories */
+.pmv-timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0 0 0;
+}
+.pmv-timeline-item {
+  margin-bottom: 2.3em;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.1em 1.6em 0.9em 1.6em;
+  box-shadow: 0 1px 4px 0 rgba(94,100,114,0.04);
+  position: relative;
+}
+.pmv-timeline-item.memory {
+  border-left: 5px solid var(--pmv-primary);
+}
+.pmv-timeline-item.milestone {
+  border-left: 5px solid var(--pmv-secondary);
+}
+.pmv-tl-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--pmv-accent);
+  background: var(--pmv-primary);
+  padding: 3px 9px;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+.pmv-tl-label.milestone {
+  background: var(--pmv-secondary);
+}
+.pmv-tl-date {
+  font-size: 0.95rem;
+  color: var(--pmv-accent);
+  margin-bottom: 2px;
+}
+.pmv-inline-photos {
+  display: flex;
+  gap: 7px;
+  margin-top: 4px;
+}
+.pmv-photo-thumb.small {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Photos Page Gallery */
+.pmv-photo-input {
+  display: none;
+}
+.pmv-photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 18px;
+  margin-bottom: 2em;
+  min-height: 36px;
+}
+.pmv-photo-thumb {
+  width: 94px;
+  height: 94px;
+  object-fit: cover;
+  border-radius: 13px;
+  box-shadow: 0 1px 5px 0 rgba(94,100,114,0.09);
+  border: 2px solid var(--pmv-secondary);
+  background: #f8f9fa;
+}
+.pmv-photo-grid.scrapbook .pmv-photo-thumb {
+  width: 65px;
+  height: 65px;
+}
+
+/* Milestones */
+.pmv-milestones-list {
+  margin-top: 1.35em;
+  list-style: none;
+  padding: 0;
+}
+.pmv-milestones-list li,
+.pmv-milestone {
+  background: #f4f6f7;
+  border-left: 4px solid var(--pmv-secondary);
+  margin-bottom: 1.2em;
+  padding: 1em 1.4em 0.8em 1.4em;
+  border-radius: 9px;
+}
+.pmv-ms-title {
+  font-weight: 600;
+}
+.pmv-ms-date {
+  margin-left: 1.25em;
+  font-size: 0.98em;
+  opacity: 0.71;
+}
+.pmv-ms-desc {
+  display: block;
+  margin-top: 3px;
+  opacity: 0.83;
+}
+
+/* Scrapbook */
+.pmv-scrapbook {
+  background: linear-gradient(100deg, #fff9f3 70%, #f5fbfa 100%);
+}
+.pmv-scrapbook-desc {
+  font-size: 1.06em;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  border: 1.2px solid var(--pmv-primary);
+  margin-bottom: 0.9em;
+  resize: vertical;
+  padding: 7px 10px;
+  color: var(--pmv-accent);
+  font-weight: 500;
+}
+.pmv-scrapbook-section {
+  margin-bottom: 2em;
+}
+.pmv-scrapbook-section h3 {
+  color: var(--pmv-accent);
+  font-size: 1.18em;
+  margin-top: 0.2em;
+}
+.pmv-milestones-list.scrapbook li {
+  background: #f9fbfd;
+  border-left-color: var(--pmv-accent);
+}
+
+/* Share Section */
+.pmv-share-section {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.pmv-share-label {
+  font-size: 1.05em;
+  color: var(--pmv-accent);
+}
+.pmv-share-btn {
+  background: var(--pmv-primary);
+  color: var(--pmv-accent);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 1em;
+  transition: background 0.17s;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pmv-share-btn:active,
+.pmv-share-btn:hover {
+  filter: brightness(92%);
+  background: var(--pmv-accent);
+  color: var(--pmv-primary);
+}
+.pmv-share-icon {
+  margin-left: 0.5em;
+}
+.pmv-share-copied {
+  position: absolute;
+  left: 95%;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 0.82em;
+  color: var(--pmv-accent);
+  background: var(--pmv-secondary);
+  padding: 1px 8px;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px 0 rgba(94,100,114,0.08);
+  margin-left: 8px;
+}
+.pmv-placeholder {
+  color: #b6b8bb;
+  font-size: 1em;
+  opacity: 0.87;
+  margin-top: 1em;
+  display: inline-block;
+}

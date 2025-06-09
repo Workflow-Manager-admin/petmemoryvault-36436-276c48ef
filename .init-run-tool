@@ -1,0 +1,4 @@
+{
+    "command": "PORT=<port> BROWSER=none npm start",
+    "working_directory": "/home/kavia/workspace/code-generation/petmemoryvault-36436-276c48ef/petmemoryvault"
+}
